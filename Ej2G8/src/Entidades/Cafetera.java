@@ -16,10 +16,10 @@ public class Cafetera {
     public Cafetera() {
     }
 
-    public Cafetera(double capacidadMáxima, double cantidadActual) {
-        this.capacidadMáxima = capacidadMáxima;
-        this.cantidadActual = cantidadActual;
-    }
+//    public Cafetera(double capacidadMáxima, double cantidadActual) {
+//        this.capacidadMáxima = capacidadMáxima;
+//        this.cantidadActual = cantidadActual;
+//    }
 
     public double getCapacidadMáxima() {
         return capacidadMáxima;

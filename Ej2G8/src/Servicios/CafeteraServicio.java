@@ -18,16 +18,17 @@ public class CafeteraServicio {
     public void llenarCafetera() {
         C1.setCapacidadMáxima(500);
         C1.setCantidadActual(C1.getCapacidadMáxima());
-        System.out.println("Cafetera Llena" + C1.getCantidadActual());
+        System.out.println("Cafetera Llena " + C1.getCantidadActual());
     }
 
     public void servirTaza(int capacTaza) {
         if (C1.getCantidadActual() > capacTaza) {
             C1.setCantidadActual(C1.getCantidadActual() - capacTaza);
-            System.out.println("Se llenoo taza Cant. Actual: " + C1.getCantidadActual());
+            System.out.println("Se llenoo taza queda Cant. Actual: " + C1.getCantidadActual());
         } else {
             System.out.println("No Hay suficiente Cafe, se llena: " + C1.getCantidadActual() + " de " + capacTaza);
             C1.setCantidadActual(0);
+            vaciarCafetera();
         }
     }
 

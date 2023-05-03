@@ -44,7 +44,7 @@ public class Ej2G8 {
         // TODO code application logic here
         CafeteraServicio Cs1 = new CafeteraServicio();
         Cs1.llenarCafetera();
-        Cs1.servirTaza(800);
+        Cs1.servirTaza(400);
         Cs1.agregarCafe(50);
     }
     
