@@ -1,3 +1,4 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -19,7 +20,7 @@ public class Ej3G8 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+
         /**
          * A continuación, en la clase main hacer lo siguiente: Crear 4 objetos
          * de tipo Persona con distintos valores, a continuación, llamaremos
@@ -32,19 +33,22 @@ public class Ej3G8 {
          * cuantas en su peso ideal y cuantos, por encima, y también
          * calcularemos un porcentaje de cuantos son mayores de edad y cuantos
          * menores. Para esto, podemos crear unos métodos adicionales.
-
+         *
          */
-        
         PersonaServicio PS = new PersonaServicio();
-        Persona P1 = PS.crearPersona();
-        System.out.println("P1: " + P1.getNombre() + "IMC= " + PS.calcularIMC());
-        Persona P2 = PS.crearPersona();
-        System.out.println("P2: " + P2.getNombre());
-        Persona P3 = PS.crearPersona();
-        System.out.println("P3: " + P3.getNombre());
+        Persona P[] = new Persona[4];
+
+        for (int j = 0; j < 4; j++) {
+            P[j] = PS.crearPersona();
+            System.out.println("P1: " + P[j].getNombre() + "IMC= " + PS.calcularIMC());
+        }
         
         
-        
+//        Persona P2 = PS.crearPersona();
+//        System.out.println("P2: " + P2.getNombre());
+//        Persona P3 = PS.crearPersona();
+//        System.out.println("P3: " + P3.getNombre());
+
     }
-    
+
 }

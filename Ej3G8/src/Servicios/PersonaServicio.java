@@ -38,8 +38,8 @@ public class PersonaServicio {
         P.setPeso(leer.nextDouble());
         System.out.print("Ing Altura: ");
         P.setAltura(leer.nextDouble());
-        //System.out.print("Ing Sexo: ");
-        //P.setSexo(leer.next());
+        System.out.print("Ing Sexo: ");
+        P.setSexo(leer.next().charAt(0));
         return P;
     }
 
