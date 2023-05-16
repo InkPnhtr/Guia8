@@ -6,7 +6,6 @@
 package Servicios;
 
 import java.util.Arrays;
-import java.util.Collections;
 
 /**
  *
@@ -14,9 +13,9 @@ import java.util.Collections;
  */
 public class ArregloServicio {
 
-    public void inicializarA(int[] n) {
+    public void inicializarA(double[] n) {
         for (int i = 0; i < 50; i++) {
-            n[i] = (int) (Math.random() * 10);
+            n[i] = Math.random() * 10;
         }
 
     }
@@ -28,8 +27,7 @@ public class ArregloServicio {
     public void ordenar(double[] n) {
         double[] auxA = new double[50];
         System.arraycopy(n, 0, auxA, 0, 50);
-        Arrays.sort(auxA, Collections.reverseOrder());
-        //Arrays.sort(auxA);
+        Arrays.sort(auxA);
         for (int i = 49; i >= 0; i--) {
             System.out.print("[" + auxA[i] + "]");
 

@@ -3,7 +3,12 @@ import java.util.Collections;
 class sortdesc{
 public static void main(String[] args){
        // int Array
-       int[] intArray=new int[]{15,9,16,2,30};
+       Integer[] intArray=new Integer[]{
+                 new Integer(15),
+                 new Integer(9),
+                 new Integer(16),
+                 new Integer(2),
+                 new Integer(30)};
 
        // Sorting int Array in descending order
        Arrays.sort(intArray,Collections.reverseOrder());
