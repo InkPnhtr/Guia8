@@ -14,40 +14,73 @@ import java.util.Scanner;
  * @author U
  */
 public class AhorcadoService {
-    Ahorcado A1 = new Ahorcado;
+    
     
     Scanner scanner = new Scanner(System.in);
-    public void crearJuego(){
+    public Ahorcado crearJuego(){
+        Ahorcado Ahorc1 = new Ahorcado();
         String pal;
         System.out.print("Ing Palabra: ");
         pal = scanner.next();
+        char[] palVec = new char[pal.length()];
         System.out.print("Ing Cant Jug Max: ");
-        A1.setJugMax(scanner.nextInt());
+        Ahorc1.setJugMax(scanner.nextInt());
         int l = pal.length();
-        A1.setL(l);
+        Ahorc1.setL(l);
         for (int j = 0; j<l; j++){
             char ch = pal.charAt(j);
-            Arrays.fill(A1.setVecPalab,(ch));
+            palVec[j] = ch;
         }
-        
+        Ahorc1.setVecPalab(palVec);
+        return Ahorc1;
     }
-    public void longitud(){
-        System.out.println("Largo Palabra = " + A1.getL());
+    public void longitud(Ahorcado Ahorc1){
+        System.out.println("Largo Palabra = " + Ahorc1.getVecPalab().length);
     }
     
-    public boolean buscar(char x){
+    public void buscar(Ahorcado Ahorc1, char x){
+        boolean b = false;
+        for (int j = 0; j<Ahorc1.getVecPalab().length ; j++){
+            if (Ahorc1.getVecPalab()[j]==x){
+                b = true;
+                System.out.println("Se Encontro la letra ingresada!!");
+                break;
+            }
+        }
+        if (!b){
+        System.out.println("No se encontro la letra ingresada");
+        }
+
+    }
+    public boolean encontradas(Ahorcado Ahorc1, char x){
         boolean b = false;
         int i=0;
-        for (int j = 0; j<A1.getL(); j++){
-            if (A1.getVecPalab(j)=x){
-                i=i++;
-                b = true;}
-            return b;
+        int largoPal = Ahorc1.getVecPalab().length;
+        int Econtradas = Ahorc1.getCantLetEnc();
+        int faltan = largoPal - Ahorc1.getCantLetEnc();
+        for (int j = 0; j<largoPal ; j++){
+            if (Ahorc1.getVecPalab()[j]==x){
+                i++;
             }
+        }
+        b = i>0;
+        if (b){
+        System.out.println("Se incontraron"+ i + "letras");
+        faltan -=i;
+        Ahorc1.setCantLetEnc(Ahorc1.getCantLetEnc()+i);
+       
+        }
+        else{
             
         }
+    return b;
+
+    }
+    public void intentos(){
         
     }
+    
+    
     
     
 }
