@@ -5,6 +5,8 @@
  */
 package ej2ex2g9;
 
+import Svcs.AhorcadoService;
+
 /**
  *
  * @author U
@@ -16,7 +18,8 @@ public class Ej2ex2G9 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Ahorc
+        AhorcadoService As = new AhorcadoService();
+        As.juego(As.crearJuego());
         
     }
     

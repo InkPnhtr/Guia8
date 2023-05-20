@@ -83,11 +83,13 @@ public class AhorcadoService {
     }
     
     public void juego(Ahorcado Ahorc1){
+        System.out.print("Ing una letra : ");
+        char letra = scanner.next().charAt(0);
         crearJuego();
         longitud(Ahorc1);
-        buscar(Ahorc1, 0);
-        encontradas(Ahorc1, 0)
-        intentos();
+        buscar(Ahorc1, letra);
+        encontradas(Ahorc1, letra);
+        intentos(Ahorc1);
     }
     
     
