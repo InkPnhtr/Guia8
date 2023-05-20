@@ -76,11 +76,19 @@ public class AhorcadoService {
     return b;
 
     }
-    public void intentos(){
+    public int intentos(Ahorcado Ahorc1){
+        int x = Ahorc1.getJugMax()-1;
+        return x;
         
     }
     
-    
+    public void juego(Ahorcado Ahorc1){
+        crearJuego();
+        longitud(Ahorc1);
+        buscar(Ahorc1, 0);
+        encontradas(Ahorc1, 0)
+        intentos();
+    }
     
     
 }

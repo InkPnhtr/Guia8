@@ -16,6 +16,7 @@ public class Ej2ex2G9 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Ahorc
         
     }
     
